@@ -68,7 +68,7 @@ function scrollToSection(sectionId) {
     border: 2px solid var(--verde-claro);
     background-color: rgb(19, 19, 19);;
     transition: transform 0.5s ease, background-color 0.5s ease;
-    cursor: url('./circuloblanco.svg') 0 0, pointer;
+    cursor: url('data:./cursor/circuloblanco.png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAEVQTFRFAAAA5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfxp1coYwAAABd0Uk5TABOJvOyIFE3t/1BhF/f2GYPY1PjwuoZdf0L0AAAAVklEQVR4nF2PWQ6AIAwFH7LviOj9jyqikWW+OknTTAGAbJQxygUaUumGMo9Z/WMB57uGiKQHEvZRM45RC8qseV5eTsXQzbs1AzBfJJNvtOD1hfMidbwBky0GZz0ZqGgAAAAASUVORK5CYII=') 0 0, pointer;
 }
 
 .mobile_menu:hover {
@@ -101,7 +101,7 @@ function scrollToSection(sectionId) {
     color: var(--verde-claro);
     transition: color 0.75s ease;
     display: inline-block;
-    cursor: url('./circulolinea.svg') 0 0, pointer;
+    cursor: url('data:./cursor/circulolinea.png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAGlQTFRFAAAAseLRseLSsuLSseLSseHSsuHSseHRsOHQpNvIsuHSsuHSsuLSseHRotHRktu2suHSqtWqmczMsuLRseLSseLSseHSsuLRseLRseHRsuHSsuLRsuDRseHSsuLRmczMseHSsuLSseHRyrOKtAAAACN0Uk5TACpYX15kX1YpBk9gZk4EA2MCBFBlYShXV2BWYihPZAJhTWSrrDvsAAAAh0lEQVR4nG3Q6RaCIBQE4CmELK6Ca2Jq5vs/ZLh1Ypl/fAcO9w6w5nJlCeeJuKU4c39IOiKzfDel6S+82O45ZrW0WNUu1pn9oyEvTYunb0QdRIgGJkQJHaKOY/R5FCMj9UiD4V8DMPpo10TOXZvUWlPh6PTeCy3H+aT5o37dt51gy8JMP2zHL8u1EeCxPg+TAAAAAElFTkSuQmCC'), pointer;
     text-decoration: none;
 }
 

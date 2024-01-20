@@ -72,7 +72,7 @@ function projectsColor(isHover) {
     font-size: 24px;
     font-style: italic;
     font-weight: lighter;
-    cursor: url('./circulolinea.svg') 0 0, auto;
+    cursor: url('data:./cursor/circulolinea.png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAGlQTFRFAAAAseLRseLSsuLSseLSseHSsuHSseHRsOHQpNvIsuHSsuHSsuLSseHRotHRktu2suHSqtWqmczMsuLRseLSseLSseHSsuLRseLRseHRsuHSsuLRsuDRseHSsuLRmczMseHSsuLSseHRyrOKtAAAACN0Uk5TACpYX15kX1YpBk9gZk4EA2MCBFBlYShXV2BWYihPZAJhTWSrrDvsAAAAh0lEQVR4nG3Q6RaCIBQE4CmELK6Ca2Jq5vs/ZLh1Ypl/fAcO9w6w5nJlCeeJuKU4c39IOiKzfDel6S+82O45ZrW0WNUu1pn9oyEvTYunb0QdRIgGJkQJHaKOY/R5FCMj9UiD4V8DMPpo10TOXZvUWlPh6PTeCy3H+aT5o37dt51gy8JMP2zHL8u1EeCxPg+TAAAAAElFTkSuQmCC'), auto;
 }
 
 .projects_btns_container {
@@ -88,7 +88,7 @@ function projectsColor(isHover) {
   padding: 5px 5px;
   background-color: rgb(65, 65, 65);
   border-radius: 7px;
-  cursor: url('./circulotransparente.svg') 0 0, pointer;
+  cursor: none;
 }
 
 .projects_btn:hover {
@@ -123,7 +123,7 @@ function projectsColor(isHover) {
 .project_link {
   color: white;
   text-decoration: none;
-  cursor: url('./circulonegro.svg') 0 0, pointer;
+  cursor: url('data:./cursor/circulonegro.png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAALdQTFRFAAAAqtjKos7Am8W4epyUY356nsi6os3Aq9fJpNvInci7cZCKGB8mAAALcpKMnsm8otHRktu2rdzMFBoiFx4lrt3OqtWqr97OmczMm8W4FBoiFx4lnMe6cI+Ic5OMqdfKo8/BGiEooczAmsS3nMa6eJmSepyTZH56ZIB6nci6n8m8oMy/GyMqoMy9cZGLdJONqtjJm8a5GSAnm8W5sN7PmczMdJSMdZWOnce6nMe6fJ6WY356n8q9Gh1AiAAAAD10Uk5TAGnb7ez57thnDsbx///xwgsH9/7++Qb5Csn9/cTz82Xa/9nu7/Dx+Pjv8dr/1vP0Y8X+wvsF8vLA7u368ILNhkAAAACiSURBVHicbdDXEoIwEAXQVUFREwWkWSn2ggJiA///uwxBGZNw33JmM5tcgCKNZkuSZandUeCXbq+PMA0aDNXSNH2EqximRed0zMR2CI4nLE5nZMccc1m44CEe/QCWvGG8grWIG9iKuKvH2ut7EQ9wFJ50CkE583iJAGKDteRK/q6aLKZaUZNl/80m6a0s1Inv/nfH46lV3bvBK8vz7B1G9PgB9OoX5Dj9cg0AAAAASUVORK5CYII='), pointer;
 }
 
 .project_title {

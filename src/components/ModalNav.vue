@@ -62,7 +62,7 @@ const clickClose = evt => {
     width: 268px;
     background-color: rgb(178, 226, 210);
     color: black;
-    cursor: url('./circuloblanco.svg') 0 0, auto;
+    cursor: url('data:./cursor/circuloblanco.png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAEVQTFRFAAAA5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfx5Pfxp1coYwAAABd0Uk5TABOJvOyIFE3t/1BhF/f2GYPY1PjwuoZdf0L0AAAAVklEQVR4nF2PWQ6AIAwFH7LviOj9jyqikWW+OknTTAGAbJQxygUaUumGMo9Z/WMB57uGiKQHEvZRM45RC8qseV5eTsXQzbs1AzBfJJNvtOD1hfMidbwBky0GZz0ZqGgAAAAASUVORK5CYII=') 0 0, auto;
     z-index: 10;
 }
 
@@ -79,7 +79,7 @@ const clickClose = evt => {
 .close_btn:hover {
     transform: rotate(-270deg);
     color: white;
-    cursor: url('./circulolineanegra.svg') 0 0, pointer;
+    cursor: url('data:./cursor/circulolineanegra.png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAFFQTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXKkVQgAAABt0Uk5TAAxEYlpjCxpcZlsYH2EcRWVdZENZChdgFhlCSBpx0QAAAGdJREFUeJxlj1kOgCAQQyswCK4guN7/oOISBHl/fWkyUwCoGBdEgjOJm1rpl6a9ctfrSD+EvtAJQmI0qTAMpDMIKhe2bBTC5kL9G9P/rIP0qfAzsKxfXrdrzB5fUcszVzpqwnw6Qh8nO2AIldRxrOgAAAAASUVORK5CYII=') 0 0, pointer;
 }
 
 
@@ -99,7 +99,7 @@ const clickClose = evt => {
 
 .modal_link:hover {
     color: white;
-    cursor: url('./circulonegro.svg') 0 0, pointer;
+    cursor: url('data:./cursor/circulonegro.png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAALdQTFRFAAAAqtjKos7Am8W4epyUY356nsi6os3Aq9fJpNvInci7cZCKGB8mAAALcpKMnsm8otHRktu2rdzMFBoiFx4lrt3OqtWqr97OmczMm8W4FBoiFx4lnMe6cI+Ic5OMqdfKo8/BGiEooczAmsS3nMa6eJmSepyTZH56ZIB6nci6n8m8oMy/GyMqoMy9cZGLdJONqtjJm8a5GSAnm8W5sN7PmczMdJSMdZWOnce6nMe6fJ6WY356n8q9Gh1AiAAAAD10Uk5TAGnb7ez57thnDsbx///xwgsH9/7++Qb5Csn9/cTz82Xa/9nu7/Dx+Pjv8dr/1vP0Y8X+wvsF8vLA7u368ILNhkAAAACiSURBVHicbdDXEoIwEAXQVUFREwWkWSn2ggJiA///uwxBGZNw33JmM5tcgCKNZkuSZandUeCXbq+PMA0aDNXSNH2EqximRed0zMR2CI4nLE5nZMccc1m44CEe/QCWvGG8grWIG9iKuKvH2ut7EQ9wFJ50CkE583iJAGKDteRK/q6aLKZaUZNl/80m6a0s1Inv/nfH46lV3bvBK8vz7B1G9PgB9OoX5Dj9cg0AAAAASUVORK5CYII=') 0 0, pointer;
 }
 
 .modal_link_container:not(:hover) .modal_link {
