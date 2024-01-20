@@ -7,6 +7,8 @@ const si = ref(false)
 function changeColor(isHover) {
     const tienesdiseno = document.querySelector('.tienes_diseno');
     tienesdiseno.style.color = isHover ? 'rgb(178, 226, 210)' : 'white';
+    response.value = false
+    si.value = false
 }
 
 function changeColorr(isHover) {
@@ -15,6 +17,9 @@ function changeColorr(isHover) {
     btns.forEach(function(btn) {
         btn.style.color = isHover ? 'rgb(178, 226, 210)' : 'white';
     })
+
+    response.value = false
+    si.value = false
 }
 
 function showSi() {
@@ -37,10 +42,6 @@ setTimeout(function () {
     }, 1); 
 }
 
-function hide() {
-    response.value = false
-    si.value = false
-}
 
 </script>
 
@@ -51,9 +52,9 @@ function hide() {
         <div class="tienes_diseno">
             <p class="pregunta" @mouseout="changeColorr(false)" @mouseover="changeColorr(true)">¿Tienes el diseño?</p>
             <div>
-              <button class="header_btn" @mouseover="showSi" @click="hide">Si</button>
+              <button class="header_btn" @mouseover="showSi">Si</button>
               /
-              <button class="header_btn" @mouseover="showNo" @click="hide">No</button>
+              <button class="header_btn" @mouseover="showNo">No</button>
             </div>
         </div>
         <Transition>

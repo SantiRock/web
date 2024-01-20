@@ -15,6 +15,8 @@ function scrollToSection(sectionId) {
       behavior: 'smooth', // Hace que el desplazamiento sea suave
     });
 
+    closeFunction();
+
   }
 }
 

@@ -3,13 +3,13 @@
 </script>
 
 <template>
-    <div class="about_container" id="about">
+    <section class="about_container" id="about">
       <div class="about_c1">
         <h2 class="about_title">¿Que onda?</h2>
         <p class="about_name">Santiago Quintero</p>
       </div>
-      <p class="about_bio">Egresado de la escuela de cine, me interesé por las artes audivisuales expandidas lo que me condujo al mundo de la programación, en el cual encontré una verdadera pasión.</p>
-    </div>
+      <p class="about_bio">Egresado de la escuela de cine, me interesé por las artes audiovisuales expandidas lo que me condujo a la programación, en la cual encontré una verdadera pasión.</p>
+    </section>
 </template>
 
 <style>

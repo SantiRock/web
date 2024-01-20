@@ -9,6 +9,11 @@ function servicesColor(isHover) {
     items.forEach(function(item) {
         item.style.color = isHover ? 'rgb(178, 226, 210)' : 'white';
     })
+
+    text.value = false
+    pp.value = false
+
+
 }
 
 function showPixelPerfect() {
@@ -41,10 +46,6 @@ function showAPI() {
         }, 1);
 }
 
-function hide() {
-    text.value = false
-    pp.value = false
-}
 
 </script>
 
@@ -52,9 +53,9 @@ function hide() {
         <div id="services" class="services_container">
             <h2 class="services_title" @mouseout="servicesColor(false)" @mouseover="servicesColor(true)">Lo que podemos ofrecerte</h2>
             <ul class="services_list">
-                <li class="services_item" @mouseover="showPixelPerfect" @click="hide">Pixel Perfect</li>
-                <li class="services_item" @mouseover="showResponsive" @click="hide">Responsive</li>
-                <li class="services_item" @mouseover="showAPI" @click="hide">API</li>
+                <li class="services_item" @mouseover="showPixelPerfect" >Pixel Perfect</li>
+                <li class="services_item" @mouseover="showResponsive" >Responsive</li>
+                <li class="services_item" @mouseover="showAPI">API</li>
             </ul>
             <Transition>
                 <div>
