@@ -13,7 +13,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: url('./cursor/circulo.png') 0 0, auto;
+  cursor: url('./cursor/circulo.icns'), auto;
 }
 
 h1,
