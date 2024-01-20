@@ -13,7 +13,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: url('./cursor/circulo.icns'), auto;
+  cursor: url('data:./cursor/circulo.png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANBAMAAACAxflPAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAADBQTFRFAAAAsuLSsuLSsuLSsuLSsuLSsuLSsuLSsuLSsuLSsuLSsuLSsuLSsuLSsuLSsuLS6ahE6gAAABB0Uk5TAE+dz/SYApr/m0Co4/icSMmCopEAAABGSURBVHicY2BgVHYOZGBgYKvo6OgoYGDgBFIdnQwMK0B0xwKGHWB6A8MJMH2A4QaYvgDnw+Rh6mH6weaVAQ1mfOysz8AAAEJ8KTUC20ZAAAAAAElFTkSuQmCC'), auto;
 }
 
 h1,
