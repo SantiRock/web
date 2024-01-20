@@ -67,7 +67,7 @@ function hide() {
     padding: 0 35px;
     margin-bottom: 33px;
     max-width: 1280px;
-    min-width: 360px;
+    min-width: 320px;
 }
 
 .titulo {

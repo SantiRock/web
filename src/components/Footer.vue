@@ -11,7 +11,7 @@
 <style>
 .footer_container {
     margin: auto;
-    min-width: 360px;
+    min-width: 320px;
     text-align: center;
     padding-bottom: 27px;
 }

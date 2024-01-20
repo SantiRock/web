@@ -49,7 +49,7 @@ function scrollToSection(sectionId) {
 .container {
     margin: auto;
     max-width: 1280px;
-    min-width: 360px;
+    min-width: 320px;
     margin-bottom: 37px;
 }
 

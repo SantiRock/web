@@ -19,7 +19,7 @@
     margin-bottom: 27px;
     padding: 21px 35px;
     max-width: 1280px;
-    min-width: 360px;
+    min-width: 320px;
 }
 
 .about_title {
