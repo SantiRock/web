@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 const text = ref(false)
+const pp = ref(false)
 
 function servicesColor(isHover) {
     var items = document.querySelectorAll('.services_item');
@@ -12,53 +13,62 @@ function servicesColor(isHover) {
 
 function showPixelPerfect() {
     text.value = true
+    pp.value = true
 
     setTimeout(function () {
         const respuestaElement = document.querySelector('.services_text');
-        respuestaElement.textContent = "Pixel Perfect, podemos trabajar en el diseño juntos, ya sea que tengas una idea, quieras algo clásico o tengas ganas de explorar posibilidades."
+        respuestaElement.textContent = "Es nuestra capacidad para que tu sitio web se vea y funcione exactamente igual a como se planteó en el diseño original. Algunos ejemplos:"
         }, 1);
 }
 
 function showResponsive() {
     text.value = true
+    pp.value = false
 
     setTimeout(function () {
         const respuestaElement = document.querySelector('.services_text');
-        respuestaElement.textContent = "Responsive, podemos trabajar en el diseño juntos, ya sea que tengas una idea, quieras algo clásico o tengas ganas de explorar posibilidades."
+        respuestaElement.textContent = "Tu sitio web se va a ver bien en cualquier tipo de pantalla y/o dispositivo adaptándose a sus medidas, ya sea un móvil, una tablet o un monitor de escritorio."
         }, 1);
 }
 
 function showAPI() {
     text.value = true
+    pp.value = false
 
     setTimeout(function () {
         const respuestaElement = document.querySelector('.services_text');
-        respuestaElement.textContent = "API, podemos trabajar en el diseño juntos, ya sea que tengas una idea, quieras algo clásico o tengas ganas de explorar posibilidades."
+        respuestaElement.textContent = "'Interfaz de programación de aplicaciones', aunque suene un poco abstracto, para simplificar, es la posibilidad de organizar, documentar la información que deseas compartir en una estructura de datos que la hace versátil y re-utilisable para proyectos web. Ya sea que quieras generar modificaciones al diseño o abrir una página nueva, no necesitas rehacerlo todo desde 0. Puedes adaptar la información al diseño que desees, cuando lo desees. "
         }, 1);
 }
 
-function textHide() {
+function hide() {
     text.value = false
+    pp.value = false
 }
 
 </script>
 
 <template>
-    <div class="services_background">
         <div id="services" class="services_container">
             <h2 class="services_title" @mouseout="servicesColor(false)" @mouseover="servicesColor(true)">Lo que podemos ofrecerte</h2>
             <ul class="services_list">
-                <li class="services_item" @mouseover="showPixelPerfect" @mouseout="textHide">Pixel Perfect</li>
-                <li class="services_item" @mouseover="showResponsive" @mouseout="textHide">Responsive</li>
-                <li class="services_item" @mouseover="showAPI" @mouseout="textHide">API</li>
+                <li class="services_item" @mouseover="showPixelPerfect" @click="hide">Pixel Perfect</li>
+                <li class="services_item" @mouseover="showResponsive" @click="hide">Responsive</li>
+                <li class="services_item" @mouseover="showAPI" @click="hide">API</li>
             </ul>
             <Transition>
-                <p v-if="text" class="services_text">No te preocupes, podemos trabajar en el diseño juntos, ya sea que tengas una idea, quieras algo clásico o tengas ganas de explorar posibilidades.</p>
+                <div>
+                    <p v-if="text" class="services_text"></p>
+                    <ul v-if="pp" class="pp_links">
+                      <li class="pp_linkc"><a href="https://www.frontendmentor.io/solutions/newsletter-signup-form-with-success-message-jOldFwfrVm" target="_blank" class="pp_link">Newsletter sign in</a></li>
+                      <li class="pp_linkc"><a href="https://www.frontendmentor.io/solutions/nft-preview-card-component-pixel-perfect-BVV4CrKv-V" target="_blank" class="pp_link">NFT preview card</a></li>
+                      <li class="pp_linkc"><a href="https://www.frontendmentor.io/solutions/frontend-mentor-qr-code-component-JMhaun5rjA" target="_blank" class="pp_link">Qr code component</a></li>
+                    </ul>
+                </div>
             </Transition>
         </div>
         <div class="linea_container"><div class="linea"></div></div>
         
-    </div>
 </template>
 
 <style>
@@ -102,6 +112,19 @@ function textHide() {
     color: var(--verde-claro);
 }
 
+.pp_links {
+    margin-top: 13px;
+}
+
+.pp_link {
+    color: white;
+    text-decoration: none;
+}
+
+.pp_linkc {
+    margin-bottom: 11px;
+}
+
 /* Estilo de transición */
 .v-enter-active, .v-leave-active {
   transition: opacity 0.5s ease;
@@ -124,6 +147,10 @@ function textHide() {
     }
 
     .services_text {
+        margin-left: 5vw;
+    }
+
+    .pp_links {
         margin-left: 5vw;
     }
 

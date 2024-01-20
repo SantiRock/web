@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 
 const response = ref(false)
+const si = ref(false)
 
 function changeColor(isHover) {
     const tienesdiseno = document.querySelector('.tienes_diseno');
@@ -18,15 +19,17 @@ function changeColorr(isHover) {
 
 function showSi() {
     response.value = true
+    si.value = true
 
     setTimeout(function () {
         const respuestaElement = document.querySelector('.respuesta');
-        respuestaElement.textContent = "Perfecto, podemos trabajar en el diseño juntos, ya sea que tengas una idea, quieras algo clásico o tengas ganas de explorar posibilidades."
+        respuestaElement.textContent = "Pixel Perfect podemos lograr que tu web quede exactamente igual a tu diseño. Acá algunos ejemplos:"
         }, 1);
 }
 
 function showNo() {
     response.value = true
+    si.value = false
 
 setTimeout(function () {
     const respuestaElement = document.querySelector('.respuesta');
@@ -36,6 +39,7 @@ setTimeout(function () {
 
 function hide() {
     response.value = false
+    si.value = false
 }
 
 </script>
@@ -47,13 +51,21 @@ function hide() {
         <div class="tienes_diseno">
             <p class="pregunta" @mouseout="changeColorr(false)" @mouseover="changeColorr(true)">¿Tienes el diseño?</p>
             <div>
-              <button class="header_btn" @mouseover="showSi" @mouseout="hide">Si</button>
+              <button class="header_btn" @mouseover="showSi" @click="hide">Si</button>
               /
-              <button class="header_btn" @mouseover="showNo" @mouseout="hide">No</button>
+              <button class="header_btn" @mouseover="showNo" @click="hide">No</button>
             </div>
         </div>
         <Transition>
-            <p v-if="response" class="respuesta"></p>
+            <div>
+                <p v-if="response" class="respuesta"></p>
+                <ul v-if="si" class="si_links">
+                    <li class="pp_linkc"><a href="https://www.frontendmentor.io/solutions/newsletter-signup-form-with-success-message-jOldFwfrVm" target="_blank" class="pp_link">Newsletter sign in</a></li>
+                    <li class="pp_linkc"><a href="https://www.frontendmentor.io/solutions/nft-preview-card-component-pixel-perfect-BVV4CrKv-V" target="_blank" class="pp_link">NFT preview card</a></li>
+                    <li class="pp_linkc"><a href="https://www.frontendmentor.io/solutions/frontend-mentor-qr-code-component-JMhaun5rjA" target="_blank" class="pp_link">Qr code component</a></li>
+                </ul>
+            </div>
+            
         </Transition> 
        </div>
     </div>
@@ -120,6 +132,10 @@ function hide() {
 
 .linea {
     border: 1px solid grey;
+}
+
+.si_links {
+    margin-top: 13px;
 }
 
 /* Estilo de transición */
