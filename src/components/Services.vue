@@ -86,7 +86,7 @@ function hide() {
     font-size: 32px;
     font-style: italic;
     font-weight: lighter;
-    cursor: url('./circulolinea.svg') 0 0, pointer;
+    cursor: url('./circulolinea.svg') 0 0, auto;
 }
 
 .services_list {
@@ -114,11 +114,17 @@ function hide() {
 
 .pp_links {
     margin-top: 13px;
+    
 }
 
 .pp_link {
     color: white;
     text-decoration: none;
+    cursor: url('./circulopeke.svg') 0 0, pointer;
+}
+
+.pp_link:hover {
+    color: var(--verde-claro);
 }
 
 .pp_linkc {
@@ -166,7 +172,7 @@ function hide() {
     }
 
     .services_title {
-        cursor: url('./circulolineagrande.svg') 0 0, pointer;
+        cursor: url('./circulolineagrande.svg') 0 0, auto;
     }
     
 }

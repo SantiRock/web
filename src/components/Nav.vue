@@ -68,7 +68,7 @@ function scrollToSection(sectionId) {
     border: 2px solid var(--verde-claro);
     background-color: rgb(19, 19, 19);;
     transition: transform 0.5s ease, background-color 0.5s ease;
-    cursor: url('./circuloblanco.cur') 0 0, pointer;
+    cursor: url('./circuloblanco.svg') 0 0, pointer;
 }
 
 .mobile_menu:hover {
@@ -101,7 +101,7 @@ function scrollToSection(sectionId) {
     color: var(--verde-claro);
     transition: color 0.75s ease;
     display: inline-block;
-    cursor: url('./circulolinea.cur') 0 0, pointer;
+    cursor: url('./circulolinea.svg') 0 0, pointer;
     text-decoration: none;
 }
 

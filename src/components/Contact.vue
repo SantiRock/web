@@ -74,7 +74,7 @@ const copyEmail = () => {
     font-size: 22px;
     font-style: italic;
     font-weight: lighter;
-    cursor: url('./circulolinea.svg') 0 0, pointer;
+    cursor: url('./circulolinea.svg') 0 0, auto;
 }
 
 .contact_email {

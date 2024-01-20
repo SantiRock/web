@@ -72,7 +72,7 @@ function projectsColor(isHover) {
     font-size: 24px;
     font-style: italic;
     font-weight: lighter;
-    cursor: url('./circulolinea.svg') 0 0, pointer;
+    cursor: url('./circulolinea.svg') 0 0, auto;
 }
 
 .projects_btns_container {

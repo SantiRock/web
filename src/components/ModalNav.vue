@@ -62,7 +62,7 @@ const clickClose = evt => {
     width: 268px;
     background-color: rgb(178, 226, 210);
     color: black;
-    cursor: url('./circuloblanco.svg') 0 0, pointer;
+    cursor: url('./circuloblanco.svg') 0 0, auto;
     z-index: 10;
 }
 

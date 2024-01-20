@@ -90,7 +90,7 @@ function hide() {
     max-width: 514px;
     font-style: italic;
     font-weight: lighter;
-    cursor: url('./circulolineagrande.svg') 0 0, pointer;
+    cursor: url('./circulolineagrande.svg') 0 0, auto;
 }
 
 .tienes_diseno {
@@ -114,7 +114,7 @@ function hide() {
 }
 
 .pregunta {
-    cursor: url('./circulotransparente.svg') 0 0, pointer;
+    cursor: url('./circulotransparente.svg') 0 0, auto;
 }
 
 .respuesta {
@@ -178,7 +178,7 @@ function hide() {
     }
 
     .titulo {
-        cursor: url('./circulolineaultragrande.svg') 0 0, pointer;
+        cursor: url('./circulolineaultragrande.svg') 0 0, auto;
     }
 
     .pregunta_container {
