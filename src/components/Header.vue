@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue';
-
+const props = defineProps({
+    obj: Object,
+})
 const response = ref(false)
 const si = ref(false)
 
@@ -28,7 +30,7 @@ function showSi() {
 
     setTimeout(function () {
         const respuestaElement = document.querySelector('.respuesta');
-        respuestaElement.textContent = "Pixel Perfect podemos lograr que tu web quede exactamente igual a tu diseño. Acá algunos ejemplos:"
+        respuestaElement.textContent = props.obj.header.yes_text
         }, 1);
 }
 
@@ -38,7 +40,7 @@ function showNo() {
 
 setTimeout(function () {
     const respuestaElement = document.querySelector('.respuesta');
-    respuestaElement.textContent = "No te preocupes, podemos trabajar en el diseño juntos, ya sea que tengas una idea, quieras algo clásico o tengas ganas de explorar posibilidades."
+    respuestaElement.textContent = props.obj.header.no_text
     }, 1); 
 }
 
@@ -47,14 +49,14 @@ setTimeout(function () {
 
 <template>
     <div class="containerh">
-        <h1 class="titulo" @mouseout="changeColor(false)" @mouseover="changeColor(true)">¿Necesitas una página web?</h1>
+        <h1 class="titulo" @mouseout="changeColor(false)" @mouseover="changeColor(true)">{{ obj.header.title }}</h1>
        <div class="pregunta_container">
         <div class="tienes_diseno">
-            <p class="pregunta" @mouseout="changeColorr(false)" @mouseover="changeColorr(true)">¿Tienes el diseño?</p>
+            <p class="pregunta" @mouseout="changeColorr(false)" @mouseover="changeColorr(true)">{{ obj.header.question }}</p>
             <div>
-              <button class="header_btn" @mouseover="showSi">Si</button>
+              <button class="header_btn" @mouseover="showSi">{{ obj.header.yes }}</button>
               /
-              <button class="header_btn" @mouseover="showNo">No</button>
+              <button class="header_btn" @mouseover="showNo">{{ obj.header.no }}</button>
             </div>
         </div>
         <Transition>
@@ -98,7 +100,8 @@ setTimeout(function () {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 230px;
+    gap: 13px;
+    width: fit-content;
     margin-bottom: 13px;
 }
 
@@ -115,6 +118,7 @@ setTimeout(function () {
 }
 
 .pregunta {
+    line-height: 1.5;
     cursor: none;
 }
 

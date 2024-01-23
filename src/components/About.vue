@@ -1,14 +1,17 @@
 <script setup>
+const props = defineProps({
+    obj: Object,
+})
 
 </script>
 
 <template>
     <section class="about_container" id="about">
       <div class="about_c1">
-        <h2 class="about_title">¿Que onda?</h2>
+        <h2 class="about_title">{{ obj.about.title }}</h2>
         <p class="about_name">Santiago Quintero</p>
       </div>
-      <p class="about_bio">Egresado de la escuela de cine, me interesé por las artes audiovisuales expandidas lo que me condujo a la programación, en la cual encontré una verdadera pasión.</p>
+      <p class="about_bio">{{ obj.about.text }}</p>
     </section>
 </template>
 

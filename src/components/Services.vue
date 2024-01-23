@@ -3,6 +3,10 @@ import { ref } from 'vue';
 const text = ref(false)
 const pp = ref(false)
 
+const props = defineProps({
+    obj: Object,
+})
+
 function servicesColor(isHover) {
     var items = document.querySelectorAll('.services_item');
 
@@ -22,7 +26,7 @@ function showPixelPerfect() {
 
     setTimeout(function () {
         const respuestaElement = document.querySelector('.services_text');
-        respuestaElement.textContent = "Es nuestra capacidad para que tu sitio web se vea y funcione exactamente igual a como se planteó en el diseño original. Algunos ejemplos:"
+        respuestaElement.textContent = props.obj.services.pixelperfect
         }, 1);
 }
 
@@ -32,7 +36,7 @@ function showResponsive() {
 
     setTimeout(function () {
         const respuestaElement = document.querySelector('.services_text');
-        respuestaElement.textContent = "Tu sitio web se va a ver bien en cualquier tipo de pantalla y/o dispositivo adaptándose a sus medidas, ya sea un móvil, una tablet o un monitor de escritorio."
+        respuestaElement.textContent = props.obj.services.responsive
         }, 1);
 }
 
@@ -42,7 +46,7 @@ function showAPI() {
 
     setTimeout(function () {
         const respuestaElement = document.querySelector('.services_text');
-        respuestaElement.textContent = "'Interfaz de programación de aplicaciones', aunque suene un poco abstracto, para simplificar, es la posibilidad de organizar, documentar la información que deseas compartir en una estructura de datos que la hace versátil y re-utilisable para proyectos web. Ya sea que quieras generar modificaciones al diseño o abrir una página nueva, no necesitas rehacerlo todo desde 0. Puedes adaptar la información al diseño que desees, cuando lo desees. "
+        respuestaElement.textContent = props.obj.services.api
         }, 1);
 }
 
@@ -51,7 +55,7 @@ function showAPI() {
 
 <template>
         <div id="services" class="services_container">
-            <h2 class="services_title" @mouseout="servicesColor(false)" @mouseover="servicesColor(true)">Lo que podemos ofrecerte</h2>
+            <h2 class="services_title" @mouseout="servicesColor(false)" @mouseover="servicesColor(true)">{{ obj.services.title }}</h2>
             <ul class="services_list">
                 <li class="services_item" @mouseover="showPixelPerfect" >Pixel Perfect</li>
                 <li class="services_item" @mouseover="showResponsive" >Responsive</li>
@@ -107,7 +111,9 @@ function showAPI() {
 }
 
 .services_text {
-    width: 288px;
+    width: 80vw;
+    max-width: 300px;
+    min-width: 280px;
     font-size: 15px;
     line-height: 2.0;
     color: var(--verde-claro);
@@ -175,6 +181,11 @@ function showAPI() {
     .services_title {
         cursor: url('data:./cursor/circulolineagrande.png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAThQTFRFAAAAptnMsOLQsuHSseHRsuLSsuLSsuHRseLSsuLRseHRsuHQrtfJseDPsuHRseHRsuLRseHRst/RqtWqsOHSsuHSseHRseHSseHRgL+/seHQseLRseHSseHRseLSsOHSsd/RsuHSsuHSr+LQseHSseHRseHSrtzRsuHSseHRruDOr+HSr97QseHSseDQrt/OsN3SruDNsuLRseLRseHSseLSsuHRseLRsuLRr+DSsuHSseHRseHRgICAsuDRseHRseHSr9/Pr+DRsuHRsuLRsuHSsuLRseLRseHSseDQqt3MseLRseHSseLSseHRseLSseDQsuLRseLSsN/Qr+HRseLRsOHOrt3Qrt7OseLOseDQsuLRseHSseHRseHPsuDRseLQsODRsuLSseLQsuHRsuLSseHSseLSwmk9UAAAAGh0Uk5TAAgjPUxmX1phZDwiCCROVl5OJAI6WGBYOgI3ZWRkZTYdYGMcRF1BCVxcFxQWYRoZEhBXV1xaRWJCHV8zMAE1WU8GIT5QT2JQPSEGTSJYNjQyMV4cG0IRDxMVFFtCQBwaNDVMO0taSzs3jzwNAAACFElEQVR4nKWXa0PaMBSGz5CDZeJEHVEn1BWF2c1uCl42NkWdouJtXjadt111//8fLG1BoDQ0yXm+8KXP23CSJicAoTyJ9cUx0Z8wkkmD/2D86UAq/MlQBp8NpTFAemh4RM4efZ5hQduHjY1PRPsvJrPhukvOnIrQX1p5se6SZ9O9/JlCb92lUBTqr2YjXt8YhC2YkNe2jO5ivwnz5wxZH9EJSXjryPs84V3QnxfMvQhrIVC/kpqPWO6s5KKqj+ZSu7/cY/WJWHnf8j9Y6j4vQ2tNKhawSaXpf1RYAe0Yn3x/dFLP56x6AVMrun5+zQuoag8AM64/qDUFPlaMB6zr+4jDfP/NUAKqGxCrUALYJhQpPpqfYYsUgNtA8xGBMIkuFhRoAbOg+SE1MaBGC6hBkhaQpAeQ/wKxiAy6WhE1CtSFZNCX8g7NX4eiSQrYhQHNU8WH7UGKtqXVAbYpAft8Vx5Rak06cQ7cg2FMP+DQO5mOpJq7MPLHXsCE/kQ2jvcvmh9U7YTYYJw+dihnWgnWeatJmtFosrJf29s06Tb5kc42D1LKjWap3tmqflMsg3MBAS6VEth80Af4rrA/1666fYCFa1nf7hp/o5K23JVnqR7uc24kNvn0rVDn3FUiBpFN/Ojlc9YwJ9Zz+DNC56z+KgkOG6csoXvEfpe7L9/l+IGk7rKx+eevye796/89Mx/+7QlK/x+ms2VjULDcKAAAAABJRU5ErkJggg==') 0 0, auto;
     }
+
+    .services_text {
+    width: 400px;
+    max-width: 400px;
+}
     
 }
 

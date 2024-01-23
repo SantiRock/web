@@ -2,7 +2,8 @@
 
 const props = defineProps({
     close: Function,
-    required: true
+    required: true,
+    obj: Object,
 })
 
 const closeFunction = () => { props.close()};
@@ -36,10 +37,10 @@ const clickClose = evt => {
 
         <div >
             <ul class="modal_menu">
-                <li class="modal_link_container"><a class="modal_link" @click="scrollToSection('services')">Propuesta</a></li>
-                <li class="modal_link_container"><a class="modal_link" @click="scrollToSection('contact')">Contacto</a></li>
-                <li class="modal_link_container"><a class="modal_link" @click="scrollToSection('projects')">Proyectos</a></li>
-                <li class="modal_link_container"><a class="modal_link" @click="scrollToSection('about')">Acerca</a></li>
+                <li class="modal_link_container"><a class="modal_link" @click="scrollToSection('services')">{{ obj.nav[0] }}</a></li>
+                <li class="modal_link_container"><a class="modal_link" @click="scrollToSection('contact')">{{ obj.nav[1] }}</a></li>
+                <li class="modal_link_container"><a class="modal_link" @click="scrollToSection('projects')">{{ obj.nav[2] }}</a></li>
+                <li class="modal_link_container"><a class="modal_link" @click="scrollToSection('about')">{{ obj.nav[3] }}</a></li>
             </ul>    
         </div>
     </div>

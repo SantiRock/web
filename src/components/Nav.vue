@@ -1,6 +1,9 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 import ModalNav from './ModalNav.vue';
+const props = defineProps({
+    obj: Object,
+})
 
 const modal = ref(false)
 
@@ -30,16 +33,16 @@ function scrollToSection(sectionId) {
             <button class="mobile_menu" @click="openModal"></button>
         </div>
 
-        <div >
+        <div>
             <ul class="nav">
-                <li class="linkcontainer"><a class="link" @click="scrollToSection('services')">Propuesta</a></li>
-                <li class="linkcontainer"><a class="link" @click="scrollToSection('contact')">Contacto</a></li>
-                <li class="linkcontainer"><a class="link" @click="scrollToSection('projects')">Proyectos</a></li>
-                <li class="linkcontainer"><a class="link" @click="scrollToSection('about')">Acerca</a></li>
+                <li class="linkcontainer"><a class="link" @click="scrollToSection('services')">{{ obj.nav[0] }}</a></li>
+                <li class="linkcontainer"><a class="link" @click="scrollToSection('contact')">{{ obj.nav[1] }}</a></li>
+                <li class="linkcontainer"><a class="link" @click="scrollToSection('projects')">{{ obj.nav[2] }}</a></li>
+                <li class="linkcontainer"><a class="link" @click="scrollToSection('about')">{{ obj.nav[3] }}</a></li>
             </ul>
         </div>
 
-        <ModalNav v-if="modal" :close="closeModel"/>
+        <ModalNav v-if="modal" :close="closeModel" :obj="obj"/>
 
     </nav >
 

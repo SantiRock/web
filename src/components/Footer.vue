@@ -1,9 +1,12 @@
 <script setup>
+const props = defineProps({
+    obj: Object,
+})
 </script>
 
 <template>
     <footer class="footer_container">
-        <p class="footer_p">Desarrollado por <span class="footer_name">Santiago Quinter</span> en <span class="footer_name">Vue.js</span> - © 2024</p>
+        <p class="footer_p">{{ obj.footer.dev }}<span class="footer_name">Santiago Quinter</span>{{ obj.footer.en }}<span class="footer_name">Vue.js</span> - © 2024</p>
     </footer>
 
 </template>

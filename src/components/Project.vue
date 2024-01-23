@@ -1,24 +1,24 @@
 <script setup>
 import { ref, computed } from "vue";
-import { projectsapi } from "./projectsapi"
 
-const projects = ref(projectsapi)
-const hideProjects = ref(false)
+const props = defineProps({
+    obj: Object,
+})
+
 let selectedTag = ref(null)
 
 const filteredProjects = computed(() => {
   if (selectedTag.value === null) {
-    return projects.value;
+    return props.obj.projects.projects;
   }
 
-  return projects.value.filter(project => project.tags.includes(selectedTag.value))
+  return props.obj.projects.projects.filter(project => project.tags.includes(selectedTag.value))
 
 })
 
 function filterProjects(tag) {
   selectedTag.value = tag;
 }
-
 
 function projectsColor(isHover) {
     var items = document.querySelectorAll('.project_container');
@@ -32,7 +32,7 @@ function projectsColor(isHover) {
 
 <template>
     <div class="projects_container" id="projects">
-      <h2 class="projects_title" @mouseover="projectsColor(true)" @mouseout="projectsColor(false)">Proyectos</h2>
+      <h2 class="projects_title" @mouseover="projectsColor(true)" @mouseout="projectsColor(false)">{{ obj.projects.title }}</h2>
       <div class="projects_btns_container">
         <button class="projects_btn" @click="filterProjects('react')">React</button>
         <button class="projects_btn" @click="filterProjects('vanilla')">Vanilla</button>
@@ -176,8 +176,8 @@ function projectsColor(isHover) {
   .projects_title {
     padding-left: 40px;
     font-size: 36px;
-
   }
+
   
 }
 
@@ -185,11 +185,14 @@ function projectsColor(isHover) {
   .projects_container {
     padding: 21px 0;
   }
+
+  .projects_title {
+    padding-left: 75px;
+  }
   
   .project_container {
     width: 290px;
   }
-
 
 }
 

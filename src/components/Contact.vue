@@ -1,8 +1,14 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+const props = defineProps({
+    obj: Object,
+})
 
 const emailMsn = ref(false)
-const msn = ref('Dale click al correo para copiarlo')
+const msn = ref(props.obj.contact.msn)
+
+onMounted(() => setTimeout(() => msn.value = props.obj.contact.msn, 10))
+    
 
 function contactColor(isHover) {
     const email = document.querySelector('.contact_email');
@@ -34,7 +40,7 @@ function hideMsnEmail() {
 const copyEmail = () => {
     const textToCopy = 'sqp.dev@gmail.com';
     navigator.clipboard.writeText(textToCopy);
-    msn.value = "El correo ha sido copiado";
+    msn.value = props.obj.contact.msn_confirm;
     const email = document.querySelector('.contact_email');
     email.style.backgroundColor = "white";
 
@@ -43,7 +49,7 @@ const copyEmail = () => {
     }, 100)
 
     setTimeout(() => {
-        msn.value = "Dale click al correo para copiarlo"
+        msn.value = props.obj.contact.msn
         
     }, 2500);
   }
@@ -52,7 +58,7 @@ const copyEmail = () => {
 
 <template>
     <div class="contact_container" id="contact">
-        <h2 class="contact_title" @mouseout="hideMsn" @mouseover="showMsn">Cuentanos sobre tu proyecto</h2>
+        <h2 class="contact_title" @mouseout="hideMsn" @mouseover="showMsn">{{ obj.contact.title }}</h2>
         <p class="contact_email" @mouseout="hideMsnEmail" @mouseover="showMsnEmail" @click="copyEmail">sqp.dev@gmail.com</p>
         <p v-if="emailMsn" class="email_msn">{{ msn }}</p>
     </div>
